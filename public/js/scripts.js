@@ -1,5 +1,5 @@
 
-var ngrokUrl = "e014f7e1"
+var ngrokUrl = "52082750"
 var onBtn, offBtn, partyBtn, defaultBtn, smashBtn
 
 /* Modes */
