@@ -25,12 +25,36 @@
     .jumbotron .lang-logo img {
       max-width: 100%; }
 
+body{
+  width:100vw;
+  height:150vh;
+  background-image: url('/img/sunset.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+h1{
+  width:100%;
+  text-align: center;
+  margin-top:5vw;
+  font-weight:lighter;
+  color:white;
+}
 
 button{
-  width:50%;
+  width:42vw;
   float:left;
-  height:50vh;
+  height:42vw;
+  margin:4vw;
   color:white;
-  font-size:10vw;
-  border:none;
+  font-size:5vw;
+  font-weight: lighter;
+  border:solid white 1px;
+  background:rgba(0,0,0,0.1);
+}
+
+button:hover{
+  background:rgba(255,255,255,1);
+  color:black;
 }

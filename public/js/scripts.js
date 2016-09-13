@@ -1,8 +1,10 @@
 
+var ngrokUrl = bbecd0d8
+
 function lightsOn(){
-  $.get("https://bbecd0d8.ngrok.io/on");
+  $.get("https://"+ngrokUrl+".ngrok.io/on");
 }
 
 function lightsOff(){
-  $.get("https://bbecd0d8.ngrok.io/off");
+  $.get("https://"+ngrokUrl+".ngrok.io/off");
 }
