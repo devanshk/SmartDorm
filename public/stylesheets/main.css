@@ -60,3 +60,10 @@ button.active{
   background:rgba(255,255,255,1);
   color:black;
 }
+
+@media  (min-width: 720px) {
+  button:hover{
+    background:rgba(255,255,255,1);
+    color:black;
+  }
+}
