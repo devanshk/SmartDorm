@@ -1,5 +1,5 @@
 
-var ngrokUrl = "085eac96"
+var ngrokUrl = "e014f7e1"
 var onBtn, offBtn, partyBtn, defaultBtn, smashBtn
 
 /* Modes */
@@ -63,10 +63,10 @@ function lightsOff(btn){
 
 /* Building Blocks */
 function partyON(){
-
+  $.get("https://"+ngrokUrl+".ngrok.io/partyOn");
 }
 function partyOFF(){
-
+  $.get("https://"+ngrokUrl+".ngrok.io/partyOff");
 }
 
 function mainON(){
