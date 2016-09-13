@@ -25,3 +25,12 @@
     .jumbotron .lang-logo img {
       max-width: 100%; }
 
+
+button{
+  width:50%;
+  float:left;
+  height:50vh;
+  color:white;
+  font-size:10vw;
+  border:none;
+}
