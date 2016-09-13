@@ -1,8 +1,8 @@
 
 function lightsOn(){
-  $.get("http://bbecd0d8.ngrok.io/on");
+  $.get("https://bbecd0d8.ngrok.io/on");
 }
 
 function lightsOff(){
-  $.get("http://bbecd0d8.ngrok.io/off");
+  $.get("https://bbecd0d8.ngrok.io/off");
 }
