@@ -25,6 +25,15 @@
     .jumbotron .lang-logo img {
       max-width: 100%; }
 
+html{
+  overflow:hidden;
+  height:100%;
+}
+body{
+  height:100%;
+  overflow:auto;
+}
+
 #wallpaper{
   width:110vw;
   height:150vh;
