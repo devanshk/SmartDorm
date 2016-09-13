@@ -3,7 +3,7 @@ var ngrokUrl = "085eac96"
 var onBtn, offBtn
 
 function lightsOn(btn){
-  // $.get("https://"+ngrokUrl+".ngrok.io/on");
+  $.get("https://"+ngrokUrl+".ngrok.io/on");
   clearTimeout($.data(this, 'onBtnTimer'));
   onBtn = btn;
   $(btn).addClass("active");
@@ -13,7 +13,7 @@ function lightsOn(btn){
 }
 
 function lightsOff(btn){
-  // $.get("https://"+ngrokUrl+".ngrok.io/off");
+  $.get("https://"+ngrokUrl+".ngrok.io/off");
   clearTimeout($.data(this, 'offBtnTimer'));
   offBtn = btn;
   $(btn).addClass("active");
