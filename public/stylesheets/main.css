@@ -25,13 +25,15 @@
     .jumbotron .lang-logo img {
       max-width: 100%; }
 
-body{
-  width:100vw;
+#wallpaper{
+  width:110vw;
   height:150vh;
-  background-image: url('/img/sunset.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  overflow: hidden;
+  position:fixed;
+  top:-10%;
+  left:50%;
+  transform:translateX(-50%);
+  z-index:-1;
+  filter: blur(20px);
 }
 
 h1{
@@ -54,7 +56,7 @@ button{
   background:rgba(0,0,0,0.1);
 }
 
-button:active, button:focus, button:hover{
+button.active{
   background:rgba(255,255,255,1);
   color:black;
 }
