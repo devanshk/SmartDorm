@@ -1,5 +1,5 @@
 
-var ngrokUrl = bbecd0d8
+var ngrokUrl = "bbecd0d8"
 
 function lightsOn(){
   $.get("https://"+ngrokUrl+".ngrok.io/on");
