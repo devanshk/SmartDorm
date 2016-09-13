@@ -1,9 +1,47 @@
 
 var ngrokUrl = "085eac96"
-var onBtn, offBtn
+var onBtn, offBtn, partyBtn, defaultBtn, smashBtn
 
+/* Modes */
+function ModeParty(btn){
+  mainOFF();
+  partyON();
+
+  console.log("partying.");
+  clearTimeout($.data(this, 'modePartyTimer'));
+  partyBtn = btn;
+  $(partyBtn).addClass("active");
+  $.data(this, 'modePartyTimer', setTimeout(function() {
+    $(partyBtn).removeClass("active");
+  }, 300));
+}
+function ModeDefault(btn){
+  partyOFF();
+  mainON();
+
+  clearTimeout($.data(this, 'modeDefaultTimer'));
+  defaultBtn = btn;
+  $(defaultBtn).addClass("active");
+  $.data(this, 'modeDefaultTimer', setTimeout(function() {
+    $(defaultBtn).removeClass("active");
+  }, 300));
+}
+function ModeSmash(btn){
+  partyOFF();
+  mainOFF();
+
+  clearTimeout($.data(this, 'modeSmashTimer'));
+  smashBtn = btn;
+  $(btn).addClass("active");
+  $.data(this, 'modeSmashTimer', setTimeout(function() {
+    $(smashBtn).removeClass("active");
+  }, 300));
+}
+
+/*Basic Buttons*/
 function lightsOn(btn){
-  $.get("https://"+ngrokUrl+".ngrok.io/on");
+  mainON();
+
   clearTimeout($.data(this, 'onBtnTimer'));
   onBtn = btn;
   $(btn).addClass("active");
@@ -13,11 +51,27 @@ function lightsOn(btn){
 }
 
 function lightsOff(btn){
-  $.get("https://"+ngrokUrl+".ngrok.io/off");
+  mainOFF();
+
   clearTimeout($.data(this, 'offBtnTimer'));
   offBtn = btn;
   $(btn).addClass("active");
   $.data(this, 'offBtnTimer', setTimeout(function() {
     $(offBtn).removeClass("active");
   }, 300));
+}
+
+/* Building Blocks */
+function partyON(){
+
+}
+function partyOFF(){
+
+}
+
+function mainON(){
+  $.get("https://"+ngrokUrl+".ngrok.io/on");
+}
+function mainOFF(){
+  $.get("https://"+ngrokUrl+".ngrok.io/off");
 }
