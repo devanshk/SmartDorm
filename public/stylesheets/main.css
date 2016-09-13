@@ -33,7 +33,7 @@
   left:50%;
   transform:translateX(-50%);
   z-index:-1;
-  webkit-filter: blur(20px);
+  -webkit-filter: blur(20px);
   filter: blur(20px);
 }
 
