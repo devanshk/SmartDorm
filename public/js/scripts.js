@@ -4,7 +4,7 @@ var onBtn, offBtn, partyBtn, defaultBtn, smashBtn
 
 /* Modes */
 function ModeParty(btn){
-  ghostsON();
+  playGhostsNStuff();
   mainOFF();
   partyON();
 
