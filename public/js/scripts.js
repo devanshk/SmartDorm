@@ -1,9 +1,10 @@
 
-var ngrokUrl = "86991697"
+var ngrokUrl = "fd0286cf"
 var onBtn, offBtn, partyBtn, defaultBtn, smashBtn
 
 /* Modes */
 function ModeParty(btn){
+  ghostsON();
   mainOFF();
   partyON();
 
@@ -16,6 +17,7 @@ function ModeParty(btn){
   }, 300));
 }
 function ModeDefault(btn){
+  killAudio();
   partyOFF();
   mainON();
 
@@ -62,6 +64,13 @@ function lightsOff(btn){
 }
 
 /* Building Blocks */
+
+function killAudio(){
+  $.get("https://"+ngrokUrl+".ngrok.io/killAudio");
+}
+function playGhostsNStuff(){
+  $.get("https://"+ngrokUrl+".ngrok.io/ghostsON");
+}
 function partyON(){
   $.get("https://"+ngrokUrl+".ngrok.io/partyOn");
 }
