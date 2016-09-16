@@ -1,6 +1,6 @@
 
 var ngrokUrl = "74f298db"
-var onBtn, offBtn, partyBtn, defaultBtn, smashBtn, bedOffBtn, bedOnBtn
+var onBtn, offBtn, partyBtn, defaultBtn, smashBtn, bedOffBtn, bedOnBtn, killAudioBtn
 
 /* Modes */
 function ModeParty(btn){
@@ -41,6 +41,18 @@ function ModeSmash(btn){
 }
 
 /*Basic Buttons*/
+
+function stopAudio(btn){
+  killAudio();
+
+  clearTimeout($.data(this, 'killAudioBtnTimer'));
+  killAudioBtn = btn;
+  $(btn).addClass("active");
+  $.data(this, 'killAudioBtnTimer', setTimeout(function() {
+    $(killAudioBtn).removeClass("active");
+  }, 300));
+}
+
 function bedroomOn(btn){
   bedOn();
 

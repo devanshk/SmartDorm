@@ -1,3 +1,14 @@
+
+@font-face{
+  font-family: 'Avenir';
+  src: url("../avenir_med.ttf");
+}
+
+@font-face{
+  font-family: 'Avenir_Light';
+  src: url("../avenir_light.ttf");
+}
+
 .jumbotron {
   background: #532F8C;
   color: white;
@@ -37,12 +48,20 @@
   filter: blur(12px);
 }
 
+body{
+  font-family: 'Avenir';
+}
+
 h1{
   width:100%;
   text-align: center;
   margin-top:5vw;
   font-weight:bold;
   color:white;
+}
+
+section{
+  clear:both;
 }
 
 button{
@@ -52,9 +71,11 @@ button{
   margin:4vw;
   color:white;
   font-size:5vw;
-  font-weight: lighter;
+  font-weight: normal;
   border:solid white 1px;
   background:rgba(0,0,0,0.1);
+
+  font-family: 'Avenir_Light';
 }
 
 button.active{
