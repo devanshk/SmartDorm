@@ -1,6 +1,6 @@
 
-var ngrokUrl = "74f298db"
-var onBtn, offBtn, partyBtn, defaultBtn, smashBtn, bedOffBtn, bedOnBtn, killAudioBtn
+var ngrokUrl = "606f4c52"
+var onBtn, offBtn, partyBtn, defaultBtn, smashBtn, bedOffBtn, bedOnBtn, killAudioBtn, allOffBtn
 
 /* Modes */
 function ModeParty(btn){
@@ -37,6 +37,19 @@ function ModeSmash(btn){
   $(btn).addClass("active");
   $.data(this, 'modeSmashTimer', setTimeout(function() {
     $(smashBtn).removeClass("active");
+  }, 300));
+}
+
+function ModeAllOff(btn){
+  partyOFF();
+  mainOFF();
+  killAudio();
+
+  clearTimeout($.data(this, 'allOffTimer'));
+  allOffBtn = btn;
+  $(btn).addClass("active");
+  $.data(this, 'allOffTimer', setTimeout(function() {
+    $(allOffBtn).removeClass("active");
   }, 300));
 }
 

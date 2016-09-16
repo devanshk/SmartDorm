@@ -9,26 +9,35 @@
 
   <img id="wallpaper" src="img/bg2.jpg"/>
 
-  <section>
-    <h1>Living Room</h1>
+  <div id="parent_container">
 
-    <button onclick="lightsOn(this);">Lights On</button>
-    <button onclick="lightsOff(this);">Lights Off</button>
-    <button onclick="stopAudio(this);">Kill Audio</button>
-  </section>
+    <h2>Basic</h2>
 
-  <section>
-    <h1>Bedroom</h1>
-    <button onclick="bedroomOn(this);">On</button>
-    <button onclick="bedroomOff(this);">Off</button>
-  </section>
+    <section>
+      <h1>Living Room</h1>
 
-  <section>
-    <h1>Modes</h1>
-    <button onclick="ModeDefault(this);">Default</button>
-    <button onclick="ModeParty(this);">Party</button>
-    <button onclick="ModeSmash(this);">Smash</button>
-  </section>
+      <button onclick="lightsOn(this);">Lvng<br>On</button>
+      <button onclick="lightsOff(this);">Lvng<br>Off</button>
+      <button onclick="stopAudio(this);">Kill<br>Audio</button>
+    </section>
+
+    <section>
+      <h1>Bedroom</h1>
+      <button onclick="bedroomOn(this);">Bdrm<br>On</button>
+      <button onclick="bedroomOff(this);">Bdrm<br>Off</button>
+    </section>
+
+    <div class="divider"></div>
+    <h2>Modes</h2>
+    <section>
+      <h1>Modes</h1>
+      <button onclick="ModeDefault(this);">Default</button>
+      <button onclick="ModeParty(this);">Party</button>
+      <button onclick="ModeSmash(this);">Smash</button>
+      <button onclick="ModeAllOff(this);">All Off</button>
+    </section>
+
+  </div>
 
 </body>
 </html>

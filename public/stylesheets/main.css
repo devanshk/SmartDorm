@@ -60,6 +60,10 @@ h1{
   color:white;
 }
 
+h2{
+  display:none;
+}
+
 section{
   clear:both;
 }
@@ -83,9 +87,48 @@ button.active{
   color:black;
 }
 
-@media  (min-width: 720px) {
+@media  (min-width: 1025px) {
   button:hover{
     background:rgba(255,255,255,1);
     color:black;
+  }
+}
+
+@media (max-width: 1024px) and (min-width:1024px){
+  section{
+    clear:none;
+  }
+  body{
+    background: -webkit-linear-gradient(top, #102d4c 0%,#264868 100%);
+  }
+  button{
+    width: 15vw;
+    height: 15vw;
+    margin: 1vw;
+    font-size:3.5vw;
+  }
+  #parent_container{
+    margin-left:60px;
+    margin-right:60px;
+    margin-top:50px;
+  }
+  .divider{
+    height:200px;
+  }
+  h1{
+    display:none;
+  }
+  h2{
+    width:100%;
+    position:relative;
+    margin-top:20px;
+    color:white;
+    font-family: 'Avenir_Light';
+  }
+  .tablet{
+    display:block;
+  }
+  #wallpaper{
+    display:none;
   }
 }
