@@ -131,6 +131,8 @@ button.active{
 @media (max-width: 1024px) and (min-width:1024px){
   section{
     clear:none;
+    position: relative;
+    z-index: 5;
   }
   body{
     /*background: -webkit-linear-gradient(top, #102d4c 0%,#264868 100%);*/
