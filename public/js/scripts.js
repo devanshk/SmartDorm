@@ -1,6 +1,6 @@
 
-var ngrokUrl = "6fe6de6f"
-var onBtn, offBtn, partyBtn, defaultBtn, smashBtn, bedOff, bedOn
+var ngrokUrl = "74f298db"
+var onBtn, offBtn, partyBtn, defaultBtn, smashBtn, bedOffBtn, bedOnBtn
 
 /* Modes */
 function ModeParty(btn){
@@ -45,20 +45,20 @@ function bedroomOn(btn){
   bedOn();
 
   clearTimeout($.data(this, 'bedroomOnTimer'));
-  bedOn = btn;
+  bedOnBtn = btn;
   $(btn).addClass("active");
   $.data(this, 'bedroomOnTimer', setTimeout(function() {
-    $(bedOn).removeClass("active");
+    $(bedOnBtn).removeClass("active");
   }, 300));
 }
 function bedroomOff(btn){
   bedOff();
 
   clearTimeout($.data(this, 'bedroomOffTimer'));
-  bedOff = btn;
+  bedOffBtn = btn;
   $(btn).addClass("active");
   $.data(this, 'bedroomOffTimer', setTimeout(function() {
-    $(bedOff).removeClass("active");
+    $(bedOffBtn).removeClass("active");
   }, 300));
 }
 
