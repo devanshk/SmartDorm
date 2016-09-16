@@ -99,7 +99,8 @@ button.active{
     clear:none;
   }
   body{
-    background: -webkit-linear-gradient(top, #102d4c 0%,#264868 100%);
+    /*background: -webkit-linear-gradient(top, #102d4c 0%,#264868 100%);*/
+    background-image: url("../img/tab_bg.jpg");
     height:100vh;
   }
   button{
