@@ -171,9 +171,10 @@ button.active{
 
   #logo{
     display:block;
-    position:fixed;
-    bottom:20px;
-    right:20px;
-    width:100px;
+    position: fixed;
+    bottom: -30px;
+    right: -100px;
+    width: 500px;
+    opacity: 0.05;
   }
 }
