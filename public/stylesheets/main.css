@@ -9,6 +9,36 @@
   src: url("../avenir_light.ttf");
 }
 
+@font-face{
+  font-family: 'Squared';
+  src: url("../squared.ttf");
+}
+
+@font-face{
+  font-family: 'Cubic';
+  src: url("../cubic.ttf");
+}
+
+@font-face{
+  font-family: 'Cone';
+  src: url("../cone.ttf");
+}
+
+@font-face{
+  font-family: 'Granite';
+  src: url("../granite.ttf");
+}
+
+@font-face{
+  font-family: 'Hyperspace';
+  src: url("../hyperspace.otf");
+}
+
+@font-face{
+  font-family: 'Oversteer';
+  src: url("../oversteer.ttf");
+}
+
 .jumbotron {
   background: #532F8C;
   color: white;
@@ -87,6 +117,10 @@ button.active{
   color:black;
 }
 
+#logo{
+  display:none;
+}
+
 @media  (min-width: 1025px) {
   button:hover{
     background:rgba(255,255,255,1);
@@ -133,5 +167,13 @@ button.active{
   }
   #wallpaper{
     display:none;
+  }
+
+  #logo{
+    display:block;
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    width:100px;
   }
 }
