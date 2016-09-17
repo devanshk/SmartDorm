@@ -3,6 +3,36 @@ var ngrokUrl = "606f4c52"
 var onBtn, offBtn, partyBtn, defaultBtn, smashBtn, bedOffBtn, bedOnBtn, killAudioBtn, allOffBtn
 
 /* UI Javascript */
+
+var recognition;
+var final_transcript = "";
+
+if (!('webkitSpeechRecognition' in window)) {
+  upgrade(); }
+else {
+  recognition = new webkitSpeechRecognition();
+  recognition.interimResults = true;
+
+  recognition.onresult = function(event) {
+    var interim_transcript = '';
+
+    for (var i = event.resultIndex; i < event.results.length; ++i) {
+      if (event.results[i].isFinal) {
+        final_transcript += event.results[i][0].transcript;
+      } else {
+        interim_transcript += event.results[i][0].transcript;
+      }
+    }
+    $("#songInput").val(final_transcript);
+    final_transcript = "";
+  };
+}
+
+function voiceRecognition(){
+  recognition.start();
+  console.log("voice recognizing.");
+}
+
 function toggleSongUI(){
     var opac = $("#black_cover").css("opacity");
     if (opac == 0){
