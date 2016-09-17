@@ -171,9 +171,6 @@ button.active{
     color:white;
     font-family: 'Avenir_Light';
   }
-  .tablet{
-    display:block;
-  }
   #wallpaper{
     display:none;
   }
