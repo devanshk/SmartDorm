@@ -29,12 +29,23 @@
 
     <div class="divider"></div>
     <h2>Modes</h2>
-    <section>
+    <section id="modeSection">
       <h1>Modes</h1>
       <button onclick="ModeDefault(this);">Default</button>
       <button onclick="ModeParty(this);">Party</button>
       <button onclick="ModeSmash(this);">Smash</button>
       <button onclick="ModeAllOff(this);">All Off</button>
+      <button onclick="toggleSongUI();">Play Song</button>
+    </section>
+
+    <div id="black_cover" onclick="toggleSongUI();"></div>
+
+    <section id="songSection">
+      <h2 id="songHeader">Song</h2>
+      <form>
+        <input type="text" id="songInput">
+      </form>
+      <button onclick="changeSong();">Play Song</button>
     </section>
 
     <img id="logo" src="img/icon.png"/>

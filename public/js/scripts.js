@@ -2,6 +2,35 @@
 var ngrokUrl = "606f4c52"
 var onBtn, offBtn, partyBtn, defaultBtn, smashBtn, bedOffBtn, bedOnBtn, killAudioBtn, allOffBtn
 
+/* UI Javascript */
+function toggleSongUI(){
+    var opac = $("#black_cover").css("opacity");
+    if (opac == 0){
+        $("#black_cover").css("visibility", "visible");
+        $("#black_cover").css("opacity", 0.8);
+        $("#songSection").css("visibility", "visible");
+        $("#songSection").css("opacity", "1");
+        $("#songSection").css("transform","translateY(-50%) translateX(-50%)");
+    }
+    else{
+        $("#black_cover").css("opacity", "0");
+        $("#songSection").css("opacity", "0");
+        $("#songSection").css("visibility", "visible");
+        $("#songSection").css("transform","translateY(-65%) translateX(-50%)");
+
+        setTimeout('$("#black_cover").css("visibility", "hidden"); $("#songSection").css("visibility", "hidden");', 200);
+    }
+}
+
+function changeSong(){
+  var songIn = $("#songInput").val();
+  songIn = songIn.replace(" ", "%20");
+  var songUrl = "/audio/"+songIn;
+  $.post(songUrl, {});
+  toggleSongUI();
+  $("#songInput").val("");
+}
+
 /* Modes */
 function ModeParty(btn){
   playGhostsNStuff();
