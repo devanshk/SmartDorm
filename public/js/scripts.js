@@ -43,6 +43,7 @@ function toggleSongUI(){
         $("#songSection").css("transform","translateY(-50%) translateX(-50%)");
     }
     else{
+        recognition.stop();
         $("#black_cover").css("opacity", "0");
         $("#songSection").css("opacity", "0");
         $("#songSection").css("visibility", "visible");
@@ -63,10 +64,10 @@ function changeSong(){
 
 /* Modes */
 function ModeParty(btn){
-  playGhostsNStuff();
   mainOFF();
   partyON();
 
+  $.post("/audio/Handclap%20-%20Fitz%20and%20the%20Tantrums", {});
   console.log("partying.");
   clearTimeout($.data(this, 'modePartyTimer'));
   partyBtn = btn;
@@ -171,10 +172,7 @@ function lightsOff(btn){
 /* Building Blocks */
 
 function killAudio(){
-  $.get("https://"+ngrokUrl+".ngrok.io/killAudio");
-}
-function playGhostsNStuff(){
-  $.get("https://"+ngrokUrl+".ngrok.io/ghostsON");
+  $.post("/audio/killAudio", {});
 }
 function partyON(){
   $.get("https://"+ngrokUrl+".ngrok.io/partyOn");

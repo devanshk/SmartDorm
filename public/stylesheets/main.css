@@ -66,18 +66,6 @@
     .jumbotron .lang-logo img {
       max-width: 100%; }
 
-#wallpaper{
-  width:110vw;
-  height:150vh;
-  position:fixed;
-  top:-10%;
-  left:50%;
-  transform:translateX(-50%);
-  z-index:-1;
-  -webkit-filter: blur(12px);
-  filter: blur(12px);
-}
-
 body{
   font-family: 'Avenir';
 }
@@ -131,17 +119,16 @@ button.active{
   }
 }
 
-@media (max-width: 1024px) and (min-width:1024px){
   section{
     clear:none;
-    positi
-    on: relative;
+    position: relative;
     z-index: 5;
   }
   body{
     /*background: -webkit-linear-gradient(top, #102d4c 0%,#264868 100%);*/
     background-image: url("../img/tab_bg.jpg");
     height:100vh;
+    background-size: cover;
   }
   button{
     width: 15vw;
@@ -235,7 +222,7 @@ button.active{
     top: 0;
     left: 0;
     opacity: 0.7;
-    z-index: 1;
+    z-index: 10;
     opacity:0;
     visibility: hidden;
 
@@ -244,4 +231,3 @@ button.active{
 	     -o-transition: all 0.6s ease;
 	        transition: all 0.6s ease;
   }
-}
