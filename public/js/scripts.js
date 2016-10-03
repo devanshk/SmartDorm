@@ -67,7 +67,7 @@ function ModeParty(btn){
   mainOFF();
   partyON();
 
-  $.post("/audio/Handclap%20-%20Fitz%20and%20the%20Tantrums", {});
+  $.post("/audio/Shake%20That%20Eminem", {});
   console.log("partying.");
   clearTimeout($.data(this, 'modePartyTimer'));
   partyBtn = btn;
