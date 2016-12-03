@@ -1,5 +1,5 @@
 
-var ngrokUrl = "98e461ff"
+var ngrokUrl = "dd7e26e5"
 var onBtn, offBtn, partyBtn, defaultBtn, smashBtn, bedOffBtn, bedOnBtn, killAudioBtn, allOffBtn
 
 /* UI Javascript */
