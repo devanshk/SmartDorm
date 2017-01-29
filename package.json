@@ -12,7 +12,8 @@
   "dependencies": {
     "ejs": "2.4.1",
     "express": "4.13.3",
-    "firebase": "^3.4.0"
+    "firebase": "^3.4.0",
+    "request": "2.79.0"
   },
   "repository": {
     "type": "git",
