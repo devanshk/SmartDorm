@@ -1,6 +1,9 @@
 var express = require('express');
 var app = express();
 var firebase = require("firebase");
+var request = require("request");
+
+var ngrokUrl = "b930f128"
 
 app.set('port', (process.env.PORT || 5241));
 
@@ -31,6 +34,110 @@ app.get('/', function(request, response) {
   response.render('pages/index');
 });
 
+app.get('/modeparty', function(request, response){
+  console.log('modeparty')
+  partyON();
+  response.end('did something')
+});
+
+app.get('/modedefault', function(request, response){
+  console.log('modedefault')
+  partyOFF();
+  mainON();
+  response.end('did something')
+});
+
+app.get('/modesmash', function(request, response){
+  console.log('modesmash')
+  partyOFF();
+  mainOFF();
+  response.end('did something')
+});
+
+app.get('/modealloff', function(request, response){
+  console.log('modealloff')
+  partyOFF();
+  mainOFF();
+  response.end('did something')
+});
+
+app.get('/bedroomon', function(request, response){
+  console.log('bedroomon')
+  bedOn();
+  response.end('did something')
+});
+
+app.get('/bedroomoff', function(request, response){
+  console.log('bedroomoff')
+  bedOff();
+  response.end('did something')
+});
+
+app.get('/lightson', function(request, response){
+  console.log('lightson')
+  mainON();
+  response.end('did something')
+});
+
+app.get('/lightsoff', function(request, response){
+  console.log('lightsoff')
+  mainOFF();
+  response.end('did something')
+});
+
+
 app.listen(app.get('port'), function() {
   console.log('Node app is running on port', app.get('port'));
 });
+
+function hitPath(pth){
+  request("https://"+ngrokUrl+".ngrok.io/"+pth, function(error, response, body) {
+    console.log(body);
+  });
+}
+
+function hitPathBKUP(pth){
+    var options = {
+      host: 'https://'+ngrokUrl+'.ngrok.io',
+      path: '/'+pth
+    };
+
+    callback = function(response) {
+      var str = '';
+
+      //another chunk of data has been recieved, so append it to `str`
+      response.on('data', function (chunk) {
+        str += chunk;
+      });
+
+      //the whole response has been recieved, so we just print it out here
+      response.on('end', function () {
+        console.log(str);
+      });
+    }
+
+    console.log('options are: '+options.host+' and '+options.path)
+
+    http.request(options, callback).end();
+}
+
+function partyON(){
+  hitPath('partyOn');
+}
+function partyOFF(){
+  hitPath('partyOff');
+}
+
+function bedOn(){
+  hitPath('bedroomOn');
+}
+function bedOff(){
+  hitPath('bedroomOff');
+}
+
+function mainON(){
+  hitPath('on');
+}
+function mainOFF(){
+  hitPath('off');
+}
