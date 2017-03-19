@@ -3,7 +3,7 @@ var app = express();
 var firebase = require("firebase");
 var request = require("request");
 
-var ngrokUrl = "32a10bfe"
+var ngrokUrl = "20cbcb01"
 
 app.set('port', (process.env.PORT || 5241));
 
