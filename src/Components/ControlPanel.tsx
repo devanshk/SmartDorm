@@ -10,7 +10,7 @@ type Props = {
 }
 
 function ControlPanel(props: Props) {
-  const ifttt = new IFTTT('***REMOVED***');
+  const ifttt = new IFTTT(process.env.REACT_APP_IFTTT_KEY!);
   const controls: any = useRoomControls(props.room);
   const triggerIFTTTWebHook = (eventName: string) => ifttt.post(eventName, []);
 

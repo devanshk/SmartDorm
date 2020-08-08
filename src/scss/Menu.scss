@@ -18,7 +18,7 @@
 
     color: white;
     font-family: 'Francois One', sans-serif;
-    font-size: 15vw;
+    font-size: 13vw;
     cursor: pointer;
     z-index: 1;
 
@@ -50,5 +50,11 @@
     height: 100%;
     background: linear-gradient(rgba(106,0,255,0.6), rgba(77,46,255,0.9));
     z-index:0;
+  }
+}
+
+@media(min-width: 769px){
+  #menu .room-option {
+    font-size: 10vw;
   }
 }
