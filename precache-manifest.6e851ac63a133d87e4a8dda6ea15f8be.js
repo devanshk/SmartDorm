@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "0680ea2f796aa35c8041c72c3e374bc3",
+    "revision": "bc88ad6110803d3bb7387b6a2fec3825",
     "url": "/SmartDorm/index.html"
   },
   {
