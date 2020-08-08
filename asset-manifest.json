@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/SmartDorm/static/css/main.c2a872cb.chunk.css",
+    "main.css": "/SmartDorm/static/css/main.c76982cb.chunk.css",
     "main.js": "/SmartDorm/static/js/main.635582d3.chunk.js",
     "main.js.map": "/SmartDorm/static/js/main.635582d3.chunk.js.map",
     "runtime-main.js": "/SmartDorm/static/js/runtime-main.76ad11c3.js",
@@ -8,15 +8,15 @@
     "static/js/2.36150508.chunk.js": "/SmartDorm/static/js/2.36150508.chunk.js",
     "static/js/2.36150508.chunk.js.map": "/SmartDorm/static/js/2.36150508.chunk.js.map",
     "index.html": "/SmartDorm/index.html",
-    "precache-manifest.17f89dee550992fdfac46bc4f829822b.js": "/SmartDorm/precache-manifest.17f89dee550992fdfac46bc4f829822b.js",
+    "precache-manifest.9c5051c910cddd46232db14d54590d9f.js": "/SmartDorm/precache-manifest.9c5051c910cddd46232db14d54590d9f.js",
     "service-worker.js": "/SmartDorm/service-worker.js",
-    "static/css/main.c2a872cb.chunk.css.map": "/SmartDorm/static/css/main.c2a872cb.chunk.css.map",
+    "static/css/main.c76982cb.chunk.css.map": "/SmartDorm/static/css/main.c76982cb.chunk.css.map",
     "static/js/2.36150508.chunk.js.LICENSE.txt": "/SmartDorm/static/js/2.36150508.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.76ad11c3.js",
     "static/js/2.36150508.chunk.js",
-    "static/css/main.c2a872cb.chunk.css",
+    "static/css/main.c76982cb.chunk.css",
     "static/js/main.635582d3.chunk.js"
   ]
 }
