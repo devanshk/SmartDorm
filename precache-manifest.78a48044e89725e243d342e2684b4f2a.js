@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "0f07e1ac9871f98a8d3fda7b940ceb1a",
+    "revision": "589dcc22f002a0a5f0e290815e294dde",
     "url": "/SmartDorm/index.html"
   },
   {
-    "revision": "dd4f511d1bf9b134a314",
-    "url": "/SmartDorm/static/css/main.9077a04e.chunk.css"
+    "revision": "91fd27c213231b13d10d",
+    "url": "/SmartDorm/static/css/main.80fd3eb5.chunk.css"
   },
   {
     "revision": "0a6d69fcc73e942675f1",
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/SmartDorm/static/js/2.36150508.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "dd4f511d1bf9b134a314",
-    "url": "/SmartDorm/static/js/main.75372999.chunk.js"
+    "revision": "91fd27c213231b13d10d",
+    "url": "/SmartDorm/static/js/main.63ac8a9d.chunk.js"
   },
   {
     "revision": "60f5f9b57ed019721cd5",
