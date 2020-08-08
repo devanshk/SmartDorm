@@ -1,0 +1,91 @@
+// Imports
+@import url('https://fonts.googleapis.com/css2?family=Francois+One&display=swap');
+
+// Variable
+$background: #121322;
+$control-bg: #1e1945;
+$control-outline: white;
+$control-color: rgba(255,255,255,0.75);
+
+html {
+  background: $background;
+}
+
+body {
+  margin: 0;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  width: 100vw;
+  height: 100vh;
+}
+
+.control {
+  width: 80%;
+  text-align: center;
+  margin: 10px;
+  background: $control-bg;
+  color: $control-color;
+  border: solid $control-color 3px;
+  font-family: 'Francois One', sans-serif;
+  font-size: 400%;
+  cursor: pointer;
+
+  @media (hover: hover) {
+    &:hover {
+      background: $control-outline;
+      color: $control-bg;
+      border-color: $control-bg;
+    }
+
+    &:active {
+      transform: scale(0.9);
+    }
+  }
+
+  @media (hover: none) {
+    &:hover {
+      animation-name: flash-white;
+      animation-duration: 3s;
+    }
+  }
+}
+
+@keyframes flash-white {
+    0% {
+      background: $control-bg;
+      color: $control-color;
+      border-color: $control-color;
+    }
+    1%  {
+      background: $control-outline;
+      color: $control-bg;
+      border-color: $control-bg;
+    }
+    5%  {
+      background: $control-outline;
+      color: $control-bg;
+      border-color: $control-bg;
+    }
+    10%  {
+      background: $control-bg;
+      color: $control-color;
+      border-color: $control-color;
+    }
+}
+
+// -- Util -- //
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
