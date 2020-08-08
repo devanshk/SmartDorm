@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/SmartDorm/static/css/main.c59956ec.chunk.css",
-    "main.js": "/SmartDorm/static/js/main.7ce35e67.chunk.js",
-    "main.js.map": "/SmartDorm/static/js/main.7ce35e67.chunk.js.map",
+    "main.css": "/SmartDorm/static/css/main.9077a04e.chunk.css",
+    "main.js": "/SmartDorm/static/js/main.75372999.chunk.js",
+    "main.js.map": "/SmartDorm/static/js/main.75372999.chunk.js.map",
     "runtime-main.js": "/SmartDorm/static/js/runtime-main.76ad11c3.js",
     "runtime-main.js.map": "/SmartDorm/static/js/runtime-main.76ad11c3.js.map",
     "static/js/2.36150508.chunk.js": "/SmartDorm/static/js/2.36150508.chunk.js",
     "static/js/2.36150508.chunk.js.map": "/SmartDorm/static/js/2.36150508.chunk.js.map",
     "index.html": "/SmartDorm/index.html",
-    "precache-manifest.4e5387901bd1ff3bb4a6c53418b66d41.js": "/SmartDorm/precache-manifest.4e5387901bd1ff3bb4a6c53418b66d41.js",
+    "precache-manifest.bf9ca8ad9545a1d23a241175527d227a.js": "/SmartDorm/precache-manifest.bf9ca8ad9545a1d23a241175527d227a.js",
     "service-worker.js": "/SmartDorm/service-worker.js",
-    "static/css/main.c59956ec.chunk.css.map": "/SmartDorm/static/css/main.c59956ec.chunk.css.map",
+    "static/css/main.9077a04e.chunk.css.map": "/SmartDorm/static/css/main.9077a04e.chunk.css.map",
     "static/js/2.36150508.chunk.js.LICENSE.txt": "/SmartDorm/static/js/2.36150508.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.76ad11c3.js",
     "static/js/2.36150508.chunk.js",
-    "static/css/main.c59956ec.chunk.css",
-    "static/js/main.7ce35e67.chunk.js"
+    "static/css/main.9077a04e.chunk.css",
+    "static/js/main.75372999.chunk.js"
   ]
 }
