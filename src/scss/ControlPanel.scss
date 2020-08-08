@@ -1,0 +1,69 @@
+// Imports
+@import 'common';
+
+.controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  width: 100vw;
+  height: 100vh;
+  filter: blur(0px);
+}
+
+.control {
+  @include noselect;
+
+  width: 80%;
+  text-align: center;
+  margin: 10px;
+  background: $control-bg;
+  color: $control-color;
+  border: solid $control-color 3px;
+  font-family: 'Francois One', sans-serif;
+  font-size: 400%;
+  cursor: pointer;
+
+  @media (hover: hover) {
+    &:hover {
+      background: $control-outline;
+      color: $control-bg;
+      border-color: $control-bg;
+    }
+
+    &:active {
+      transform: scale(0.9);
+    }
+  }
+
+  @media (hover: none) {
+    &:hover {
+      animation-name: flash-white;
+      animation-duration: 3s;
+    }
+  }
+}
+
+@keyframes flash-white {
+    0% {
+      background: $control-bg;
+      color: $control-color;
+      border-color: $control-color;
+    }
+    1%  {
+      background: $control-outline;
+      color: $control-bg;
+      border-color: $control-bg;
+    }
+    5%  {
+      background: $control-outline;
+      color: $control-bg;
+      border-color: $control-bg;
+    }
+    10%  {
+      background: $control-bg;
+      color: $control-color;
+      border-color: $control-color;
+    }
+}

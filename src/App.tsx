@@ -1,31 +1,23 @@
-import React from 'react';
-import IFTTT from 'ifttt-webhooks-channel';
+import React, { useState } from 'react';
 import './scss/App.scss';
 
-import useRoomControls from './Hooks/useRoomControls';
+import ControlPanel from './Components/ControlPanel';
+import Menu from './Components/Menu';
 
 function App() {
-  const ifttt = new IFTTT('***REMOVED***');
-  const controls: any = useRoomControls('bedroom');
-  const triggerIFTTTWebHook = (eventName: string) => ifttt.post(eventName, []);
-
-  const genControl =
-    (total: number, name: string, key: number) =>
-      <div
-        onClick={() => triggerIFTTTWebHook(controls[name])}
-        key={key}
-        className='control noselect'
-        style={{ lineHeight: 80 / total + 'vh' }}>
-        {setLowercaseExceptFirst(name)}
-      </div>;
-
-  const setLowercaseExceptFirst = (word: string) => word.charAt(0).toUpperCase() + word.toLowerCase().slice(1)
+  const [showMenu, setShowMenu] = useState(true);
+  const [room, setRoom] = useState('bedroom');
 
   return (
     <div id='App'>
-      <div className='controls'>
-        {controls ? Object.keys(controls).map((name, i) => genControl(Object.keys(controls).length, name, i)) : null}
-      </div>
+      <div id='menu-toggle' onClick={() => setShowMenu(!showMenu)}>⪌</div>
+      <ControlPanel room={room} inBackground={showMenu} />
+      {showMenu &&
+        <Menu
+          room={room}
+          onRoomChange={setRoom}
+          handleMenuClose={() => setShowMenu(false)}
+        />}
     </div>
   );
 }

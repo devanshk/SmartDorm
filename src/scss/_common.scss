@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Francois+One&display=swap');
+
+$background: #121322;
+$control-bg: #1e1945;
+$control-outline: white;
+$control-color: rgba(255,255,255,0.75);
+
+$transition-duration: 0.5s;
+
+// -- Util -- //
+@mixin noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
+
+.animated {
+  transition: all $transition-duration;
+}
+
+.blurred {
+  -webkit-filter: blur(5px);
+  -moz-filter: blur(5px);
+  -o-filter: blur(5px);
+  -ms-filter: blur(5px);
+  filter: blur(5px);
+}
