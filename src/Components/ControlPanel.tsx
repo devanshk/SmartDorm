@@ -12,7 +12,11 @@ type Props = {
 function ControlPanel(props: Props) {
   const ifttt = new IFTTT(process.env.REACT_APP_IFTTT_KEY!);
   const controls: any = useRoomControls(props.room);
-  const triggerIFTTTWebHook = (eventName: string) => ifttt.post(eventName, []);
+  const triggerIFTTTWebHook = (eventName: string) => {
+    for (var i = 0; i < controls.length; i++) {
+      ifttt.post(controls[i], []);
+    }
+  };
 
   const genControl =
     (total: number, name: string, key: number) =>
